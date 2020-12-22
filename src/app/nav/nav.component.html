@@ -5,26 +5,32 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>
       <div>USUARIO</div>
-      
+      <div><a mat-list-item href="/logout">
+        <span class="material-icons">exit_to_app</span></a></div>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">
-        <i class="material-icons">home</i>Home</a>
-      <a mat-list-item href="#"><i class="material-icons">contacts</i>Contacts</a>
-      <a mat-list-item href="#"><i class="material-icons">building</i>Clients</a>
-      <a mat-list-item href="#">Ticketing</a>
-      <a mat-list-item href="#">Agency</a>
-      <a mat-list-item href="#">Warehouse</a>
+      <a mat-list-item routerLink="/home">
+        <span class="material-icons">home</span>Home</a>
+      <a mat-list-item routerLink="/contacts">
+        <span class="material-icons">contacts</span>Contacts</a>
+      <a mat-list-item routerLink="/clients">
+        <span class="material-icons">person_pin</span>Clients</a>
+      <a mat-list-item routerLink="/tickets">
+        <span class="material-icons">local_play</span>Ticketing</a>
+      <a mat-list-item routerLink="/salespoint">
+        <span class="material-icons">store_mall_directory</span>Agency</a>
+      <a mat-list-item routerLink="/warehouse">
+        <span class="material-icons">home_work</span>Warehouse</a>
+    </mat-nav-list>
+    <mat-nav-list>
+      <div><a mat-list-item href="/config">
+        <span class="material-icons">miscellaneous_services</span>Settings</a></div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button
+        (click)="drawer.toggle()" *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>nemesisapp</span>
