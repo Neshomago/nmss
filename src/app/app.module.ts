@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
+import {MatTableModule} from '@angular/material/table';
+
+import {MatInputModule} from '@angular/material/input';
+import { CreateComponent } from './create/create.component';
+import { UsereditComponent } from './useredit/useredit.component'; 
 
 @NgModule({
   declarations: [
@@ -39,6 +45,8 @@ import { RouterModule } from '@angular/router';
     NavComponent,
     HomeComponent,
     LoginComponent,
+    CreateComponent,
+    UsereditComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,11 +61,22 @@ import { RouterModule } from '@angular/router';
     MatListModule,
     MatGridListModule,
     MatCardModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatMenuModule,
+    MatTableModule,
     RouterModule.forRoot([
       { path:'',component: HomeComponent},
       { path:'login',component: LoginComponent},
       { path:'home',component:HomeComponent},
+      {path:'contacts',component:ContactsComponent},
+      {path:'clients',component:ClientsComponent},
+      {path:'salespoint',component:SalespointComponent},
+      {path:'warehouse',component:WarehouseComponent},
+      {path:'tickets',component:TicketsComponent},
+      {path:'create',component:CreateComponent},
+      {path:'edituser',component:UsereditComponent}
     ])
   ],
   providers: [],

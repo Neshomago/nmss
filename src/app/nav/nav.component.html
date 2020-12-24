@@ -4,9 +4,18 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>
-      <div>USUARIO</div>
-      <div><a mat-list-item href="/logout">
-        <span class="material-icons">exit_to_app</span></a></div>
+      <div class="grid-container-create">
+        <div class="loginname">User Name</div>
+        <div class="loginname-logout">
+          <a mat-list-item href="/logout">
+            <span class="material-icons">exit_to_app</span>
+          </a>
+        </div>
+        <div class="loginname-role">
+          <p>USER ROLES</p>
+        </div>
+      </div>
+
     </mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/home">

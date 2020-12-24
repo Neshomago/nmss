@@ -48,7 +48,7 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Monstserrat, "Helvetica Neue", sans-serif; }
 .login-nemesis {
 background-image: linear-gradient( rgb(252, 190, 56),rgb(223, 148, 61));
-height: 100%;
+height: 120%;
 }
 .logintitle {
     margin:auto;
@@ -85,6 +85,20 @@ height: 100%;
   box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.295);
   max-height: 250px;
 }
+
+.boxform{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.295);
+  margin-top: 3rem;
+}
+
 }
 
 /* PARA PANTALLAS MAYORES A CELULARES */
@@ -93,18 +107,36 @@ height: 100%;
   justify-content: center;
   align-items: center;
   margin: auto;
-  max-width: 450px;
+  max-width: 350px;
   height: 250px;
   background-color: #fff;
-  padding: 30px;
+  padding: 20px;
   border-radius: 20px;
   box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.295);
   margin-top: 3rem;
 }
 
+.loginform{
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.loginwidth{
+  width: 80%;
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: rgb(223, 148, 61);
+}
+
 .custom-form {
-  min-width: 300px;
-  max-width: 300px;
+  min-width: 220px;
+  max-width: 340px;
   margin: 0px auto;
   background: rgba(255, 255, 255, 0.15);
   padding: 2rem 3rem;
@@ -115,7 +147,7 @@ height: 100%;
   color: black;
   margin-top: 3rem;
 }
-.custom-form input {
+/* .custom-form input {
   display: block;
   margin: 2rem 0;
   width: 100%;
@@ -126,10 +158,9 @@ height: 100%;
       rgba(0, 0, 0, 0.1);
   border: 0 none;
   background: #ebf5fc;
-}
+} */
 
-
- .custom-form button {
+ .inputbutton {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   border: none;
@@ -137,21 +168,87 @@ height: 100%;
   color: #ffffff;
   font-weight: bold;
   background-image: linear-gradient(180deg, rgb(69,83,95),rgb(42,52,62));
-  width: 80%;
+  width: 60%;
   display: block;
-  padding: 0.875rem 1rem;
+  padding: 10px;
   border-radius: 10px;
-  box-shadow: 0px 3px 8px #b1b1b1/* -3px -3px 8px #ffffff*/;
+  box-shadow: 0px 3px 8px #b1b1b1;
   cursor: pointer;
   margin: auto;
+  margin-top: 20px;
 } 
+
+/* #login .inputemail, #login .inputpassword {
+  border: none;
+  border-bottom: orange 1px solid;
+  padding: 10px 0px 10px 0px;
+  margin-bottom: 30px;
+  width: 100%  ;
+}  */
 
 /*NavBar SideBar colors*/
 .mat-list-base .mat-list-item {
-color:rgba(255, 255, 255, 1);
+color:rgba(255, 255, 255, 0.7);
 }
 
 .mat-toolbar.mat-primary {
-color: rgba(223, 120, 61, 0.3);
+color: #212121;
 font-weight: 300;
+}
+
+.grid-container-create{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 20px 15px;
+}
+
+.loginname, .loginname-logout{
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; */
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.loginname-role {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 10px;
+}
+
+.table {
+  padding: 1em;
+}
+
+.h1-form{
+padding-right: 20px;
+display: flex;
+flex-wrap: wrap;
+}
+
+.create-form{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.boxform{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 900px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.295);
+  margin-top: 3rem;
+}
+
+.cancel{
+  color: #ff4554;
+}
+
+.savebtn{
+  color: #99c794;
 }

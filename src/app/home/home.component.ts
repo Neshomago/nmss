@@ -13,7 +13,8 @@ export class HomeComponent {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'Tickets creados', cols: 2, rows: 1 },
+          { title: 'Tickets creados', cols: 1, rows: 1 },
+          {title:'Usuarios', cols:1,rows:1},
           { title: 'Technician Assigned', cols: 1, rows: 1 },
           { title: 'News', cols: 1, rows: 1 },
           /*{ title: 'Card 4', cols: 1, rows: 1 }*/
@@ -21,7 +22,8 @@ export class HomeComponent {
       }
 
       return [
-        { title: 'Tickets creados', cols: 2, rows: 1 },
+        { title: 'Tickets creados', cols: 1, rows: 1 },
+        {title:'Usuarios', cols:1,rows:1},
         { title: 'Technician Assigned', cols: 1, rows: 1 },
         { title: 'News', cols: 1, rows: 1 },
         // { title: 'Card 4', cols: 1, rows: 1 }
