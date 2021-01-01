@@ -49,3 +49,8 @@ table {
   h1 {
       padding: 10px;
   }
+
+  .button-right{
+    position: fixed;
+    right: 15px;
+  }

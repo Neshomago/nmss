@@ -178,14 +178,6 @@ height: 120%;
   margin-top: 20px;
 } 
 
-/* #login .inputemail, #login .inputpassword {
-  border: none;
-  border-bottom: orange 1px solid;
-  padding: 10px 0px 10px 0px;
-  margin-bottom: 30px;
-  width: 100%  ;
-}  */
-
 /*NavBar SideBar colors*/
 .mat-list-base .mat-list-item {
 color:rgba(255, 255, 255, 0.7);
@@ -251,4 +243,10 @@ flex-wrap: wrap;
 
 .savebtn{
   color: #99c794;
+}
+
+.margen-boton {
+  position: absolute;
+  right: 30px;
+  top: 15px;
 }

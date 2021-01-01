@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,7 +10,6 @@ import { WarehouseComponent } from './warehouse/warehouse.component';
 import { ClientsComponent } from './clients/clients.component';
 import { SalespointComponent } from './salespoint/salespoint.component';
 import { TicketsComponent } from './tickets/tickets.component';
-import { TicketCreateComponent } from './ticket-create/ticket-create.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSliderModule} from '@angular/material/slider';
@@ -33,6 +32,14 @@ import {MatInputModule} from '@angular/material/input';
 import { CreateComponent } from './create/create.component';
 import { UsereditComponent } from './useredit/useredit.component'; 
 
+import {AuthService} from './services/auth.service';
+import { HttpClientModule } from '@angular/common/http';
+import { AddTicketComponent } from './tickets/add-ticket/add-ticket.component';
+import { AddContactComponent } from './contacts/add-contact/add-contact.component';
+import { AddAgencyComponent } from './salespoint/add-agency/add-agency.component';
+import {btnfloatComponent} from './btn-float.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,12 +48,15 @@ import { UsereditComponent } from './useredit/useredit.component';
     ClientsComponent,
     SalespointComponent,
     TicketsComponent,
-    TicketCreateComponent,
     NavComponent,
     HomeComponent,
     LoginComponent,
     CreateComponent,
     UsereditComponent,
+    AddTicketComponent,
+    AddContactComponent,
+    AddAgencyComponent,
+    btnfloatComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,14 +72,15 @@ import { UsereditComponent } from './useredit/useredit.component';
     MatGridListModule,
     MatCardModule,
     FormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatMenuModule,
     MatTableModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path:'',component: HomeComponent},
       { path:'login',component: LoginComponent},
-      { path:'home',component:HomeComponent},
       {path:'contacts',component:ContactsComponent},
       {path:'clients',component:ClientsComponent},
       {path:'salespoint',component:SalespointComponent},
@@ -79,7 +90,7 @@ import { UsereditComponent } from './useredit/useredit.component';
       {path:'edituser',component:UsereditComponent}
     ])
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

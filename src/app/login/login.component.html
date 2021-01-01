@@ -1,20 +1,18 @@
 <div class="login-nemesis">
-    <div class="logintitle">
-        <p>{{test}}</p>
-    </div>
+    <div class="logo-login"><img width=300 src="assets/img/logo-nemesisfull.png" /></div>
     <div class="inputs">
         <div class="login">
-            <form class="loginform" id="login" action="" method="POST">
+            <form class="loginform" id="login" (ngSubmit)="onLogin()">
                 <mat-form-field class="loginwidth">
                     <mat-label>EMAIL</mat-label>
-                    <input matInput type="email" name="email" required autofocus ngModel><br>
+                    <input matInput type="email" name="email" required autofocus><br>
                 </mat-form-field>
                 <mat-form-field class="loginwidth">
                     <mat-label>PASSWORD</mat-label>
-                    <input matInput type="password" name="password" ngModel><br>
-                    <!-- <mat-hint align="end">Min 5 characters</mat-hint> -->
+                    <input matInput type="password" name="password"><br>
                 </mat-form-field>
-                <input class="inputbutton" type="submit" value="login"><br>
+                <input class="inputbutton" type="submit" value="login"
+                 (click)="onLogin()"><br>
             </form>
         </div>
         <div class="copyright">

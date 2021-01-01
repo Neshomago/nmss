@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators, FormGroupDirective, NgForm} from '@angular/forms';
-import {Router} from '@angular/router';
 import {ErrorStateMatcher} from '@angular/material/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+
+import {  UserInterface } from 'src/app/models/users-model';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -20,18 +23,22 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 export class LoginComponent implements OnInit {
 
   test : string ='NEMESIS';
+  error : any;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
+  constructor(
+    // private auth:AuthService,
+    private router:Router,
+    ) { }
+  
+  ngOnInit(): void {}
+  
+  //emailFormControl = new FormControl('', [ Validators.required, Validators.email,]);
 
   matcher = new MyErrorStateMatcher();
+
+  onLogin() {
+    return this.router.navigate(['./home']);  
+  }
 
 }
 
