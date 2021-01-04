@@ -1,1 +1,82 @@
 <p>add-ticket works!</p>
+
+<div class="table boxform">
+
+    <form class="create-form">
+      <!-- <mat-form-field class="example-full-width">
+        <mat-label>Company (disabled)</mat-label>
+        <input matInput disabled value="Google">
+      </mat-form-field> -->
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+        <td colspan="2">
+          <h1 class="h1-form">CREATE NEW USER</h1>
+        </td>
+        </tr>
+        <tr>
+        <td><mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input matInput>
+        </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+          <mat-label>Last Name</mat-label>
+          <input matInput>
+        </mat-form-field></td>
+      </tr>
+      
+      <tr><td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Fiscal Code</mat-label>
+          <input matInput placeholder="0924496896001">
+        </mat-form-field>
+        <!-- <mat-form-field class="example-full-width">
+          <mat-label>Address 2</mat-label>
+          <textarea matInput></textarea>
+        </mat-form-field> -->
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Contact Customer</mat-label>
+          <input matInput placeholder="Type a letter to select">
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+        <td><mat-form-field class="example-full-width">
+          <mat-label>Address</mat-label>
+          <input matInput placeholder="Ex. San Francisco">
+        </mat-form-field></td>
+        </tr>
+        </table>
+        <table class="example-full-width">
+          <tr>
+            <td><mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="mail@mail.com" type="email">
+            </mat-form-field></td>
+            <td><mat-form-field class="example-full-width">
+              <mat-label>Phone</mat-label>
+              <input matInput> <!--#postalCode maxlength="5" placeholder="Ex. 94105" value="94043" -->
+              <!-- <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint> -->
+            </mat-form-field></td>
+      </tr>
+      <tr>
+        <mat-label>Assignated Role</mat-label>
+        <mat-selection-list  #shoes>
+          <mat-list-option *ngFor="let role of typesOfRole">
+            {{role}}
+          </mat-list-option>
+        </mat-selection-list>
+        <br>
+      </tr>
+    
+    </table>
+      <button mat-raised-button class="cancel"><span class="material-icons">
+        clear</span>Cancel</button>
+      <button mat-raised-button class="savebtn"><span class="material-icons">
+        done
+        </span> Save</button>
+    </form>
+  </div>

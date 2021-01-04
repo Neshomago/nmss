@@ -1,1 +1,24 @@
-<p>tickets works!</p>
+<div>
+    <table class="table table-stripped">
+        <thead>
+        <th>Status</th>
+        <th>Ticket Code</th>
+        <th>Agency</th>
+        <th>Request Type</th>
+        <th>Priority</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of TicketList">
+            <td></td>
+            <td>{{dataItem.TicketCode}}</td>
+            <td>{{dataItem.SalesPoint}}</td>
+            <td>{{dataItem.RequestType}}</td>
+            <td>{{dataItem.Priority}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="botonflotante">
+    <a (clic)="onCreate()">+</a>
+</div>
+</div>

@@ -27,6 +27,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog'; 
 
 import {MatInputModule} from '@angular/material/input';
 import { CreateComponent } from './create/create.component';
@@ -38,6 +39,7 @@ import { AddTicketComponent } from './tickets/add-ticket/add-ticket.component';
 import { AddContactComponent } from './contacts/add-contact/add-contact.component';
 import { AddAgencyComponent } from './salespoint/add-agency/add-agency.component';
 import {btnfloatComponent} from './btn-float.component';
+import {SharedService} from './services/shared.service';
 
 
 @NgModule({
@@ -77,6 +79,7 @@ import {btnfloatComponent} from './btn-float.component';
     MatInputModule,
     MatMenuModule,
     MatTableModule,
+    MatDialogModule,
     HttpClientModule,
     RouterModule.forRoot([
       { path:'',component: HomeComponent},
@@ -90,7 +93,7 @@ import {btnfloatComponent} from './btn-float.component';
       {path:'edituser',component:UsereditComponent}
     ])
   ],
-  providers: [AuthService],
+  providers: [AuthService, SharedService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
